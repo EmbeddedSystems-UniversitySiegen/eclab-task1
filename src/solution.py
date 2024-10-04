@@ -1,3 +1,12 @@
+"""
+This module contains functions to solve various tasks related to the velocity profile inside a pipe using different methods.
+The tasks involve solving systems of linear equations derived from difference equations and modeling fluid flow with various
+dependencies.
+Functions:
+    solution_task2()
+    solution_task3()
+    solution_task4()
+"""
 import numpy as np
 import config as cfg
 
