@@ -3,17 +3,20 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Project information -----------------------------------------------------
 import os
 import sys
 from sphinx.ext import todo
 
+sys.path.insert(0, os.path.abspath("../../src"))
+
+
+# -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'EC-Lab-Task1'
-copyright = '2024, University Siegen'
-author = 'University Siegen'
-release = '1'
+project = 'EC-Lab-1'
+copyright = '2024, Utkarsh Raj'
+author = 'Utkarsh Raj'
+release = '1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -24,12 +27,12 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "myst_parser",
-    "sphinx.ext.todo"
+    "sphinx.ext.todo",
 ]
 
 todo_include_todos = True
 
-# conf.py``
+# conf.py
 myst_url_schemes = [
     "http",
     "https",
@@ -41,19 +44,19 @@ myst_enable_extensions = [
 ]
 
 source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown',
+    ".rst": "restructuredtext",
+    ".md": "markdown",
 }
+
 
 templates_path = ['_templates']
 exclude_patterns = []
 
 
 # -- Options for HTML output -------------------------------------------------
-
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
 html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -62,9 +65,8 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 html_favicon = "_static/unisiegen.png"
 
+
 # Function to convert absolute paths to relative paths
-
-
 def convert_todo_path(app, doctree, fromdocname):
     # Iterate over all nodes in the document tree
     for node in doctree.traverse(todo.todo_node):

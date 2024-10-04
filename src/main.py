@@ -1,4 +1,4 @@
-from solver import solution_task2, solution_task3, solution_task4
+from solution import solution_task2, solution_task3, solution_task4
 from example_plot import custom_plot, simple_line_plot
 
 # Task 2
