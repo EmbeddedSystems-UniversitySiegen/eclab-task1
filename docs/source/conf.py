@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath("../../src"))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'EC-Lab-1'
-copyright = '2024, Utkarsh Raj'
+copyright = '2024, Universität Siegen'
 author = 'Utkarsh Raj'
 release = '1.0'
 

@@ -1,12 +1,15 @@
 """
-main.py
 This script executes a series of tasks and optionally generates example plots. 
 It imports task solutions from the 'solution' module and plotting functions 
-from the 'example_plot' module. 
+from the 'example_plot' module.
+
 Functions:
-- solution_task2(): Executes the solution for task 2.
-- solution_task3(): Executes the solution for task 3.
-- solution_task4(): Executes the solution for task 4.
+
+solution_task2(): Executes the solution for task 2.
+
+solution_task3(): Executes the solution for task 3.
+
+solution_task4(): Executes the solution for task 4.
 """
 
 

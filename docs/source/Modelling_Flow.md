@@ -119,10 +119,15 @@ These are the Navier-Stokes equations for an incompressible fluid in cylindrical
 Fortunately, for time invariant flow (steady state) using the following assumptions simplifies down the Eq 11 considerably.
 
 **Incompressible Flow**: Density $\rho$ is constant.
+
 **Steady-State**: $\frac{\partial}{\partial t} = 0$.
+
 **Axisymmetric Flow**: $\frac{\partial}{\partial \theta} = 0$ and $u_\theta = 0$
+
 **Fully Developed**: $\frac{\partial u_z}{\partial z} = 0$ but $\frac{\partial p}{\partial z} \neq 0$
+
 **No Radial Velocity**: $u_r = 0$
+
 **Newtonian Fluid**: $mu$ is constant.
 
 ### Finite Difference Method for Solving Navier-Stokes Equation

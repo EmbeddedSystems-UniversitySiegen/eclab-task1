@@ -1,3 +1,10 @@
+"""
+Example of using the stream_plot decorator to stream a plot to the browser.
+Use the plotting functions as shown in the example below to stream the plot to the browser.
+
+"""
+
+
 from plot_image import stream_plot
 from matplotlib import pyplot as plt
 import numpy as np
