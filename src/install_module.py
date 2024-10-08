@@ -12,7 +12,8 @@ def install_module(module_name):
     Installs the specified Python module using pip.
 
     Example:
-    if __name__ == '__main__':
+        if __name__ == '__main__':
         install_module('numpy')
     """
+
     subprocess.check_call([sys.executable, "-m", "pip", "install", module_name])

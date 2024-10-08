@@ -1,4 +1,4 @@
-# Modelling Flow in Pipes
+# Lab 1 - Modelling Flow in Pipes
 
 ## Introduction
 

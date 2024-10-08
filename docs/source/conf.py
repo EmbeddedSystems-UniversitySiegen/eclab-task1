@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.abspath("../../src"))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'EC-Lab-1'
+project = 'Embedded Control Lab'
 copyright = '2024, Universität Siegen'
 author = 'Utkarsh Raj'
 release = '1.0'
