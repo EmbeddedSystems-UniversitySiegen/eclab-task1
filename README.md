@@ -55,5 +55,5 @@ The function capture_plot, captures the current matplotlib plot as a base64-enco
 
 - [Introduction to Python](https://www.w3schools.com/python/python_getstarted.asp)
 - [Solving linear equations](https://numpy.org/doc/1.25/reference/generated/numpy.linalg.solve.html)
-- [Matplotlib] (https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html#sphx-glr-gallery-lines-bars-and-markers-simple-plot-py)
+- [Matplotlib](https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html#sphx-glr-gallery-lines-bars-and-markers-simple-plot-py)
 
