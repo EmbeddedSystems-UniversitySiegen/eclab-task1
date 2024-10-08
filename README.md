@@ -9,7 +9,7 @@ pip install -r requirements.txt
 ## Installing Packages
 
 - Install packages as per the requirements.txt file to run locally in your system. 
-- To install modules or libraries for the tasks, use install_module.py file when running in the your team coding space https://eslab.es.eti.uni-siegen.de/codespace/eclab/ectask1.
+- Use the `install_module.py` module to install an external module (if required) in [lab codespace](https://eslab.es.eti.uni-siegen.de/codespace/eclab/ectask1).
 
 ```Python
 Example:
@@ -21,8 +21,11 @@ Example:
 
 ## Plotting Graphs
 
-Use the functions in the plot_image.py file to plot images. Examples of plotting can be found in the example_plot.py file. This file provides utilities for capturing and streaming matplotlib plots as base64-encoded PNG images. It includes functions to capture a plot, stream the plot data to stdout, and a decorator to automate the capture and streaming process for any matplotlib plotting function.
-The function capture_plot, captures the current matplotlib plot as a base64-encoded PNG image. The function plot_to_stdout streams the given base64-encoded plot data to stdout in chunks and the function stream_plot is a decorator that wraps matplotlib plotting functions to automatically capture and stream the plot. The below example shows plotting a simple linear plot and plotting non linear functions like sine wave between a particular range. 
+Use the functions in the plot_image.py file to plot images. 
+Examples of plotting can be found in the example_plot.py file. The file provides utilities for capturing and streaming Matplotlib plots as base64-encoded PNG images. 
+The file includes functions to capture a plot, stream the plot data to stdout, and a decorator to automate the capture and streaming process for any Matplotlib plotting function.
+
+The function `capture_plot`, captures the current Matplotlib plot as a base64-encoded PNG image. The function `plot_to_stdout` streams the given base64-encoded plot data to stdout in chunks and the function `stream_plot` is a decorator that wraps Matplotlib plotting functions to capture and stream the plot automatically. The example below shows plotting a simple linear plot and nonlinear functions like sine wave for a given range. 
 
 ```Python
     @stream_plot
