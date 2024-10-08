@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 ## Installing Packages
 
-- Install packages as per the requirements.txt file to run locally in your system. 
+- Install packages as per the requirements.txt file when running locally. 
 - Use the `install_module.py` module to install an external module (if required) in [lab codespace](https://eslab.es.eti.uni-siegen.de/codespace/eclab/ectask1).
 
 ```Python
