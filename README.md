@@ -19,13 +19,17 @@ Example:
         install_module("matplotlib") 
 ```
 
-## Plotting Graphs
+## Plotting Utilities
 
-Use the functions in the plot_image.py file to plot images. 
-Examples of plotting can be found in the example_plot.py file. The file provides utilities for capturing and streaming Matplotlib plots as base64-encoded PNG images. 
-The file includes functions to capture a plot, stream the plot data to stdout, and a decorator to automate the capture and streaming process for any Matplotlib plotting function.
+The `plot_image.py` file contains functions for plotting images using Matplotlib. For usage examples, refer to the `example_plot.py` file, which demonstrates how to capture and stream plots as base64-encoded PNG images.
 
-The function `capture_plot`, captures the current Matplotlib plot as a base64-encoded PNG image. The function `plot_to_stdout` streams the given base64-encoded plot data to stdout in chunks and the function `stream_plot` is a decorator that wraps Matplotlib plotting functions to capture and stream the plot automatically. The example below shows plotting a simple linear plot and nonlinear functions like sine wave for a given range. 
+This utility includes:
+
+`capture_plot`: Captures the current Matplotlib plot and encodes it as a base64 PNG image.
+`plot_to_stdout`: Streams the base64-encoded image data to stdout in chunks.
+`stream_plot`: A decorator that automatically captures and streams the plot data for any Matplotlib plotting function.
+
+Below is an example demonstrating how to plot a simple linear function and a sine wave over a specified range. These utilities simplify the process of capturing and streaming Matplotlib plots, making them suitable for embedding in web applications or APIs.
 
 ```Python
     @stream_plot
