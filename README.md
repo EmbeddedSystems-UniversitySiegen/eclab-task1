@@ -64,7 +64,7 @@ To run the tests, add the module to the Python path and execute the test file.
 
 ```BASH
 export PYTHONPATH=$PYTHONPATH:"$PWD/src"
-pytest
+pytest -s # with print
 ```
 
 ## References
