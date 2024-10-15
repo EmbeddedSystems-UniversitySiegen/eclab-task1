@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 ## Installing Packages
 
-- Install packages as per the requirements.txt file when running locally. 
+- Install packages as per the requirements.txt file when running locally.
 - Use the `install_module.py` module to install an external module (if required) in [lab codespace](https://eslab.es.eti.uni-siegen.de/codespace/eclab/ectask1).
 
 ```Python
@@ -16,7 +16,7 @@ Example:
 
     if __name__ == "__main__":
         install_module("numpy")
-        install_module("matplotlib") 
+        install_module("matplotlib")
 ```
 
 ## Plotting Utilities
@@ -57,10 +57,18 @@ Below is an example demonstrating how to plot a simple linear function and a sin
     custom_plot()
 ```
 
+## Testing
+
+The `tests/test_task1.py` file contains a simple test case for the `solution.py` functions. The test case verifies the correctness of the function by comparing the output with the expected solution.
+To run the tests, add the module to the Python path and execute the test file.
+
+```BASH
+export PYTHONPATH=$PYTHONPATH:"$PWD/src"
+pytest
+```
 
 ## References
 
 - [Introduction to Python](https://www.w3schools.com/python/python_getstarted.asp)
 - [Solving linear equations](https://numpy.org/doc/1.25/reference/generated/numpy.linalg.solve.html)
 - [Matplotlib](https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html#sphx-glr-gallery-lines-bars-and-markers-simple-plot-py)
-
