@@ -96,3 +96,6 @@ def test_task4_boundary_conditions(fix_task4_soln):
         cfg.u_z_L, "solution_task4: average velocity at z = L must be within 1 percent of u_z_L"
     print(f"u[:, -1].mean() = {u[:, -1].mean()}")
     assert abs(u[:, -1].mean()) < 0.5, "solution_task4: average velocity at r = R must be close to zero"
+
+
+#THi is just a test commit
