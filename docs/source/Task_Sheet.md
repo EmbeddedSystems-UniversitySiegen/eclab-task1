@@ -25,7 +25,8 @@ $$T(r) = T_0 + \beta r^2 (18)$$
 Consider the model for the flow of an incompressible Newtonian fluid in a pipe where the velocity profile $u_z$ varies with both radial ($r$) and axial ($z$) coordinates, according to Eq 19.
 
 - Write Python program to solve the system of linear equations obtained by converting the Eq 19 into difference equation.
-- Create a a 3D plot of velocity profile as a function of both radial ($r$) and axial ($z$) coordinates.
+- Plot the velocity profile as a function of radial ($r$) coordinate at $z = L/2$, $z = 0$ and $z = L$.
+- Plot the velocity as function of axial ($z$) coordinate at $r = 0$ $r = R/2$ and $r = R$.
 
 $$
 \mu \left( \frac{\partial^2 u_z}{\partial r^2} + \frac{1}{r} \frac{\partial u_z}{\partial r} \right) + \gamma \frac{\partial^2 u_z}{\partial z^2} = \frac{\partial p}{\partial z}
@@ -54,7 +55,7 @@ $$
 
 ## Deliverable
 
-1. Three Python scripts, one for each task.
+1. `solution.py` Python script containing the implementation of the task 2, task 3, and task 4 solutions.
 2. Report describing your approach, understanding of continuous dynamics modelling, and your observations.
 
 ## Evaluation Criteria
