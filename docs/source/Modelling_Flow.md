@@ -13,12 +13,10 @@ _Figure 1: A pool of tasks completed based on scheduling_
 The Navier-Stokes equations are a set of equations that describe how the velocity field of a fluid evolves over time. They are an extension of Newton's second law of motion to fluid flow and incorporate the principles of conservation of mass, momentum and energy. In
 the generalized form (time-dependent and compressible flow) the Navier-Stokes equations is given by Eq 1 and Eq 2:
 Mass Conservation Equation:
-Equation (1):
 
 $$ \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) = 0 (1)$$
 
 Momentum Conservation Equation:
-Equation (2):
 
 $$
  \quad \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \left( \mathbf{u} \cdot \nabla \right) \mathbf{u} \right) = -\nabla p + \nabla \cdot \tau + \mathbf{F}    (2)
@@ -30,7 +28,7 @@ $$
 \nabla =\left({\partial  \over \partial x},{\partial  \over \partial y},{\partial  \over \partial z}\right)  (3)
 $$
 
-The gradient operator \(\nabla\) in cylindrical coordinates takes the form:
+The gradient operator $(\nabla)$ in cylindrical coordinates takes the form:
 
 $$
 \nabla = (\frac{\partial}{\partial r}, \frac{1}{r} \frac{\partial}{\partial \theta}, \frac{\partial}{\partial z}  ) (4)
@@ -38,9 +36,97 @@ $$
 
 Additionally, compressible liquids require conservation of energy formulation.
 
-If you are looking for a quick million dollars, then solving Eq 1 and Eq 2 gets you that from Clay Mathematics Institute along with possibly a Fields Medal in mathematics.
+If you are looking for a quick million dollars, then solving Eq 1 and Eq 2, or showing existence of regular solutions, gets you that from Clay Mathematics Institute along with possibly a Fields Medal in mathematics.
+In 2D, incompressible Navier-Stokes solutions are known to exist and remain smooth indefinitely (free of singularities).
+In 3D, however, we still don’t know if smooth solutions always exist even for the case of incompressible flow.
+
 ![alt text](images/Surface-Velocities-on-race-car.png)
 _Figure 2: Surface velocities on race car body showing flow trajectories (Source: Mentor Graphics)_
+
+### Conservation of Mass
+
+For a finite volume V, the mass contained in the volume is given by:
+
+$$ m = ∫_V \rho dV $$
+
+where $ρ$ is the density of the fluid. The rate of change of mass in the volume is given by:
+
+$$ d/dt ∫_V ρ dV = -∮_S \rho u ⋅ dS $$
+
+where $u$ is the velocity vector and $S$ is the surface of the volume.
+
+Now using Divergence theorem:
+
+> Divergence theorem connects **local divergence within a volume** (the "sources" or "sinks" of field) to the **total flux across the surface** bounding the volume.
+> It shifts our perspective from needing to understand each tiny detail inside a region to just measuring the effect on the boundary.
+
+$$ ∮_S ρ u ⋅ dS = ∫_V ∇ ⋅ (ρ u) dV $$
+
+Now, the rate of change of mass in the volume is given by:
+
+$$ d/dt ∫_V ρ dV = -∫_V ∇ ⋅ (ρ u) dV $$
+
+Since above equation has to be true for any arbitrary $V$, we get:
+
+$$ \frac{\partial \rho}{\partial t} + ∇ ⋅ (\rho u) = 0 $$
+
+### Conservation of Momentum
+
+By second law of Newton, the rate of change of momentum in a volume is given by:
+
+$$
+\frac{D\rho\vec{u}}{D t} = \text{Sum of forces on the fluid element}
+$$
+
+where $\vec{v}$ is the velocity vector and $D/Dt$ is the material derivative. The material derivative is the total derivative of a quantity with respect to time, and it accounts for the change in the quantity due to both the change in time and the change in position of the fluid element.
+The material derivative is given by:
+
+$$
+\frac{D \phi}{D t} = \frac{\partial \phi}{\partial t} + \frac{\partial \phi}{\partial x} \frac{dx}{dt} + \frac{\partial \phi}{\partial y} \frac{dy}{dt} + \frac{\partial \phi}{\partial z} \frac{dz}{dt}
+$$
+
+where $\phi$ is the quantity of interest and $x, y, z$ are the spatial coordinates, thus we have:
+
+$$
+\frac{D \phi}{D t} = \frac{\partial \phi}{\partial t} + u \frac{\partial \phi}{\partial x} + v \frac{\partial \phi}{\partial y} + w \frac{\partial \phi}{\partial z}
+$$
+
+And in the vector form, the material derivative is given by:
+
+$$
+\frac{D \phi}{D t} = \frac{\partial \phi}{\partial t} + (\vec{u} \cdot \nabla) \phi
+$$
+
+For conservation of momentum, the quantity of interest is the momentum vector $\rho\vec{u}$, thus we have:
+
+$$
+\frac{D \rho\vec{u}}{D t} = \frac{\partial \rho\vec{u}}{\partial t} + (\vec{u} \cdot \nabla) \rho\vec{u}
+$$
+
+The forces acting on unit volume are given by:
+
+$$
+\vec{f}_{\text{pressure}} = -\nabla p
+$$
+
+For newtonian fluids, the viscous force is given by:
+
+$$
+\vec{f}_{\text{viscous}} = \mu \nabla^2 \vec{v}
+$$
+
+where $\mu$ is the dynamic viscosity of the fluid.
+Assuming, gravity is the only external force acting on the fluid, the body force is given by:
+
+$$
+\vec{f}_{\text{body}} = \rho \vec{g}
+$$
+
+Thus, the momentum conservation equation is given by:
+
+$$
+\frac{\partial \rho\vec{u}}{\partial t} + (\vec{u} \cdot \nabla) \rho\vec{u} = -\nabla p + \mu \nabla^2 \vec{v} + \rho \vec{g}
+$$
 
 ## Incompressible Flow
 
