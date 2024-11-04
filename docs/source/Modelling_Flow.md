@@ -100,7 +100,7 @@ $$
 For conservation of momentum, the quantity of interest is the momentum vector $\rho\vec{u}$, thus we have:
 
 $$
-\frac{D (\rho\vec{u}}){D t} = \frac{\partial (\rho\vec{u})}{\partial t} + (\vec{u} \cdot \nabla) \rho\vec{u}
+\frac{D (\rho\vec{u})}{D t} = \frac{\partial (\rho\vec{u})}{\partial t} + (\vec{u} \cdot \nabla) \rho\vec{u}
 $$
 
 The forces acting on unit volume are given by:
