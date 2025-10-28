@@ -13,6 +13,7 @@ Embedded Control Lab: Task 1
    Modelling_Flow.md
    Task_Sheet.md
    todo.rst
+   lab_report_guidelines.md
    modules.rst
 
 
